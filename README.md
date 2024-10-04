@@ -1,197 +1,29 @@
-# Mind Shelf API Documentation
+# MindShelf
 
-## Book Model
-### addBook [POST]
+Welcome to **MindShelf**, an AI-powered book summarizer designed to help you pick up right where you left off in any book! Powered by **OpenAI**, MindShelf provides in-depth summaries based on a specific page number so you can quickly dive back into the book without needing to reread earlier chapters.
 
-Route: “/book/”
+## Project Overview
 
-Description: Creates book with specified fields
+This project was initially built by a team of four, including myself. In this personal continuation of the project, I will be focused on adding a few additional features. An about to explain how to use the site, why we made it, a demo and promo video, update styling, rehost, and more.
 
-####  Input format JSON:
-```json
-{
-  "bookName": "String",
-  "pageNumber": "Number",
-  "email": "String"
-}
-```
+My personal contribution in the inital creation of the project was integrating OpenAI into the system and creating the prompts for accurate and meaningful book summaries.
 
-#### Output format JSON:
+### How It Works
 
-OK 200
-```json
-{
-      "bookName": "String",
-      "description": "String",
-      "pageNumber": "Number",
-      "imageUrl": "String",
-      "email": "String",
-      "_id": "String",
-      "createdAt": "Date",
-      "updatedAt": "Date"
-}
-```
+- Input the title of a book and the page number you've last read.
+- The AI will generate a summary of the book up to that point, allowing you to jump right back into reading without hesitation.
 
-Bad Request 400
-```json
-{
-    "message": "error"
-}
-```
+**MindShelf** is the perfect tool for readers who want to quickly refresh their memory on books they’ve temporarily set aside.
 
-### updateBookById [PUT]
-Route: “/book/:id”
+## Features
 
-Description: Updates all book properties with specified book id
-#### Input format JSON:
-params: "id": String
+- **AI-Powered Summaries:** Receive a detailed summary of a book up to any specific page.
+- **Easy-to-Use Interface:** Designed to make book summarization fast and accessible.
+- **Customizable:** You can input any book and specify the last page you read to get the most relevant summary.
 
-```json
-{
-    "name": "String",
-    "pageNumber": "Number",
-    "email": "String"
-}
-```
+## Demo photo
+<img width="1437" alt="landing page" src="">
+<img width="1437" alt="book display page" src="">
 
-#### Output format JSON:
-
-404 Not Found
-```json
-{
-  "message": "Book not found"
-}
-```
-
-Bad Request 400
-```json
-{
-  "message": "Error message"
-}
-```
-
-OK 200
-```json
-{
-    "name": "String",
-    "description": "String",
-    "imageUrl": "String",
-    "pageNumber": "Number",
-    "email": "String",
-    "_id": "String",
-    "createdAt": "Date",
-    "updatedAt": "Date"
-}
-```
-
-### deleteBookById [DEL]
-Route: “/book/:id”
-
-Description: Deletes book with specified book id
-
-#### Input format JSON:
-
-params: “id”: “string”
-
-Output format JSON:
-
-404 Not Found
-```json
-{
-  "message": "Book not found"
-}
-```
-
-Bad Request 400
-```json
-{
-  "message": "Error message"
-}
-```
-
-OK 200
-```json 
-{
-    "name": "String",
-    "description": "String",
-    "pageNumber": "Number",
-    "email": "String",
-    "_id": "String",
-    "createdAt": "Date",
-    "updatedAt": "Date"
-}
-```
-
-### getBookById [GET]
-Route: “/book/:id”
-
-Description: Gets book with specified id
-#### Input format JSON:
-params: “id”: “string”
-
-#### Output format JSON:
-404 Not Found
-```json
-{
-  "message": "Book not found"
-}
-```
-
-Bad Request 400
-```json
-{
-"message": "Error message"
-}
-```
-
-OK 200
-```json
-{
-    "name": "String",
-    "description": "String",
-    "pageNumber": "Number",
-    "email": "String",
-    "_id": "String",
-    "createdAt": "Date",
-    "updatedAt": "Date"
-}
-```
-
-### getAllBooks [POST]
-Route: “/book/getAll”
-
-Description: Get all book for the specified email
-
-#### Input format JSON:
-```json
-{
-  "email": "String"
-}
-```
-
-
-#### Output format JSON:
-OK 200
-```json
-[
-  {
-    "name": "String",
-    "description": "String",
-    "pageNumber": "Number",
-    "email": "String",
-    "_id": "String",
-    "createdAt": "Date",
-    "updatedAt": "Date"
-  }
-]
-```
-
-Bad Request 400
-```json
-{
-  "message": "Error message"
-}
-```
-
-
-
+## Live Demo
+Check out the live demo of MindShelf at MindShelf.co:3000.
