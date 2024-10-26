@@ -1,75 +1,30 @@
-## Detailed Documentation
+# MindShelf
 
-### Components
+Welcome to **MindShelf**, an AI-powered book summarizer designed to help you pick up right where you left off in any book! Powered by **OpenAI**, MindShelf provides in-depth summaries based on a specific page number so you can quickly dive back into the book without needing to reread earlier chapters.
 
-Components are the building blocks of the application's user interface. They are located in the `src/components`
-directory.
+## Project Overview
 
-- **ExampleComponent.tsx**: A brief description of what this component does.
+This project was initially built by a team of four, including myself. In this personal continuation of the project, I will be focused on adding a few additional features. An about to explain how to use the site, why we made it, a demo and promo video, update styling, rehost, and more.
 
-### Containers
+My personal contribution in the inital creation of the project was integrating OpenAI into the system and creating the prompts for accurate and meaningful book summaries.
 
-Containers manage the state and logic for groups of components. They are located in the `src/containers` directory.
+### How It Works
 
-- **ExampleContainer.tsx**: A brief description of what this container does.
+- Input the title of a book and the page number you've last read.
+- The AI will generate a summary of the book up to that point, allowing you to jump right back into reading without hesitation.
 
-### Services
+**MindShelf** is the perfect tool for readers who want to quickly refresh their memory on books they’ve temporarily set aside.
 
-Services handle API calls and any related data logic. They are located in the `src/services` directory.
+## Features
 
-- **apiService.ts**: A service for making HTTP requests using Axios.
+- **AI-Powered Summaries:** Receive a detailed summary of a book up to any specific page.
+- **Easy-to-Use Interface:** Designed to make book summarization fast and accessible.
+- **Customizable:** You can input any book and specify the last page you read to get the most relevant summary.
 
-### Utilities
+## Demo photo
+<img width="1437" alt="landing page" src="https://github.com/MorrisrCodes/MindShelf/blob/only-my-updates/client_side/zaddy/src/imgs/mindshelflandingpage.png">
+<img width="1437" alt="book display page" src="https://github.com/MorrisrCodes/MindShelf/blob/only-my-updates/client_side/zaddy/src/imgs/mindshelfbookdisplay.png">
+<img width="1437" alt="book display summary" src="https://github.com/MorrisrCodes/MindShelf/blob/only-my-updates/client_side/zaddy/src/imgs/mindshelfsum.png">
 
-Utility functions that are reused throughout the project are located in the `src/utils` directory.
-
-- **helpers.ts**: Contains various helper functions used across components and containers.
-
-### Backend
-
-#### Models
-
-Mongoose models that define the structure of our MongoDB documents are located in the `server/models` directory.
-
-- **User.ts**: Defines the schema and model for user documents.
-
-#### Routes
-
-Express routes are defined in the `server/routes` directory.
-
-- **userRoutes.ts**: Contains routes related to user operations such as registration and login.
-
-#### Server
-
-The main server setup is located in `server/server.ts`. This file initializes the Express server, connects to the
-MongoDB database, and defines middleware.
-
-### Testing
-
-Testing is accomplished using `@testing-library/react` for the frontend, and any Node.js testing framework (like Jest)
-for the backend tests.
-
-### Styling
-
-Styling for the application is done using SASS. SASS files are linked from each component or container as needed.
-
-## Further Reading
-
-- **React Documentation**: [React](https://reactjs.org/docs/getting-started.html)
-- **TypeScript Documentation**: [TypeScript](https://www.typescriptlang.org/docs/)
-- **Express Documentation**: [Express](https://expressjs.com/)
-- **Mongoose Documentation**: [Mongoose](https://mongoosejs.com/docs/)
-- **Axios Documentation**: [Axios](https://axios-http.com/docs/intro)
-
-## Issues
-
-If you encounter any issues while using this project, please open an issue in
-the [Issue Tracker](<repository-issue-tracker-url>) and provide as much detail as possible.
-
-## Credits
-
-This project is maintained by [Your Name](<your-profile-url>).
-
-## Contact
-
-For any questions or inquiries, please contact [Your Name](mailto:<your-email-address>).
+## Live Demo
+Check out the live demo of MindShelf at MindShelf.co:3000.
